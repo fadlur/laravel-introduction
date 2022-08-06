@@ -13,7 +13,13 @@ class SensorController extends Controller
      */
     public function index(Request $request)
     {
-        //
+        $data = [
+            'status' => true,
+            'message' => 'Data sensor ditemukan',
+            'data' => null,
+            'errors' => null,
+        ];
+        return response()->json($data, 200);
     }
 
     /**
@@ -34,7 +40,13 @@ class SensorController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $data = [
+            'status' => true,
+            'message' => 'Response post method sensor ditemukan',
+            'data' => null,
+            'errors' => null,
+        ];
+        return response()->json($data);
     }
 
     /**
@@ -45,7 +57,13 @@ class SensorController extends Controller
      */
     public function show($id)
     {
-        //
+        $data = [
+            'status' => true,
+            'message' => 'Data sensor ditemukan by id : ' . $id,
+            'data' => null,
+            'errors' => null,
+        ];
+        return response()->json($data, 200);
     }
 
     /**
@@ -68,7 +86,13 @@ class SensorController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $data = [
+            'status' => true,
+            'message' => 'Response patch method id ' . $id,
+            'data' => null,
+            'errors' => null,
+        ];
+        return response()->json($data);
     }
 
     /**
@@ -79,6 +103,12 @@ class SensorController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $data = [
+            'status' => true,
+            'message' => 'Response delete method id ' . $id,
+            'data' => null,
+            'errors' => null,
+        ];
+        return response()->json($data);
     }
 }

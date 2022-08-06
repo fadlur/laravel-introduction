@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\SensorController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -54,3 +55,10 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 //     ];
 //     return response()->json($data);
 // });
+// Routing menggunakan controller
+// Route::get('sensor', [SensorController::class, 'index']);
+// Route::post('sensor', [SensorController::class, 'store']);
+// Route::patch('sensor/{id}', [SensorController::class, 'update']);
+// Route::delete('sensor/{id}', [SensorController::class, 'destroy']);
+// Routing menggunakan controller resource
+Route::resource('sensor', SensorController::class);
